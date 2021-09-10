@@ -6,15 +6,14 @@
   "scripts": {
     "build": "tsc",
     "preserve": "npm run build",
-    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
-    "prestart": "npm run build",
-    "start": "cross-env NODE_ENV=production node dist/index.js"
+    "serve": "concurrently \"tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -25,6 +24,7 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.1",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^16.7.13",
     "concurrently": "^6.2.1",
